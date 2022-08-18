@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+.main-navbar {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    width: 100vw;
+    border-bottom: 2px solid black;
+    font-family:'Silkscreen', cursive;
+    background-color: rgba(186, 186, 186, 0.777);
+}
+
+.main-navbar h1 {
+    font-size: 60px;
+    color:aquamarine;
+    margin: 0 0 10px 20px;
+    text-align: center;
+}
+.main-navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0 10px 0 10px;
+}
+
+.nav-links {
+    margin:15px 5px 15px 5px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 12px;
+    color: white;
+    transition: 600ms; 
+}
+
+.nav-links:hover {
+    background-color: rgb(101, 101, 101);
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+.color-change {
+    animation: color-change 50s step-end infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes color-change {
+    0%{
+        color:rgb(15, 240, 240)
+    }
+    10%{
+        color:rgb(255, 0, 0)
+    }
+    20%{
+        color:rgb(45, 44, 47)
+    }
+    30%{
+        color:rgb(86, 199, 84)
+    }
+    40%{
+        color:rgb(255, 149, 0)
+    }
+    50%{
+        color:rgb(180, 72, 180)
+    }
+    60%{
+        color:rgb(72, 0, 255)
+    }
+    70%{
+        color:rgb(95, 59, 23)
+    }
+    80%{
+        color:rgb(44, 44, 44)
+    }
+    90%{
+        color:rgb(123, 255, 0)
+    }
+    100%{
+        color:rgb(15, 240, 240)
+    }
+}
+
+@media only screen and (min-width:800px) {
+    .main-navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

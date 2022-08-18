@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import React, { useState } from "react";
+import NavBar from "./navbar/NavBar";
+import FlipButton from "./flip-button/FlipButton";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
+  const [color, setColor] = useState("");
+  const [colorText, setColorText] = useState("");
+  let hexColor = "#";
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar color={color} setColor={setColor} setColorText={setColorText} />
+
+      <Switch>
+        <Route path="/">
+          <FlipButton
+            color={color}
+            setColor={setColor}
+            colorText={colorText}
+            setColorText={setColorText}
+            hexColor={hexColor}
+          />
+        </Route>
+      </Switch>
     </div>
   );
 }
